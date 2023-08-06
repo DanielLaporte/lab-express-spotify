@@ -1,0 +1,22 @@
+<div class='container-artist'>
+    <div class="btn-index">
+        <a href="/" style="text-decoration: none;">Inicio</a>
+    </div>
+    <h1>Resultados de búsqueda de artistas:</h1>
+    <div class="artist-cards">
+        {{#each searchData}}
+            <div class="artist-card">
+                <div class="img-artist">
+                    {{#if images}}
+                        <img src="{{images.[0].url}}" alt="{{name}} Image">
+                    {{else}}
+                        <img src="./images/spotify.png" alt="Logo Spotify">
+                        <p>No se encontró imagen para este artista.</p>
+                    {{/if}}
+                </div>
+                <h2>{{name}}</h2>
+                <a href="/albums/{{id}}" class="btn">Ver Álbumes</a>
+            </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="body">
+    <div class="container text-center">
+        <h1>Pistas del álbum</h1>
+        <div class="container-cards">
+            <div class="artist-cards">
+                {{#each albums}}
+                    <div class="artist-card">
+                        <div class="img-artist">
+                            <img src="{{images.[0].url}}" alt="{{name}} Album Cover">
+                        </div>
+                        <h2>{{name}}</h2>
+                        <a href="/tracks/{{id}}" class="btn">Ver pistas</a>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
